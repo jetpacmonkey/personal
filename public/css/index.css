@@ -1,0 +1,44 @@
+body {
+	display: -webkit-flex;
+	display: flex;
+}
+
+h1 {
+	text-align: center;
+	font-style: italic;
+	font-size: 2em;
+	line-height: 1.5;
+	background: rgb(140, 140, 140);
+	background: rgba(180, 180, 180, 0.3);
+	margin: 0;
+	border-radius: 20px 20px 0 0;
+	color: #333;
+}
+
+#content {
+	padding: 2em 5em;
+	font-size: 1.3em;
+	line-height: 1.2;
+	color: #333;
+}
+
+a {
+	color: #08F;
+	font-style: italic;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 0.88em;
+	text-decoration: underline;
+}
+
+a[href^="http"]:after {
+	content: " \21d7";
+}
+
+a[href^="mailto"]:after {
+	content: " \2709";
+}
+
+a:hover {
+	color: #0BF;
+	text-decoration: none;
+}
