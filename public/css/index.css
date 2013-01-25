@@ -22,7 +22,7 @@ h1 {
 	color: #333;
 }
 
-a {
+#content a {
 	color: #08F;
 	font-style: italic;
 	font-family: Helvetica, Arial, sans-serif;
@@ -30,15 +30,79 @@ a {
 	text-decoration: underline;
 }
 
-a[href^="http"]:after {
+#content a[href^="http"]:after {
 	content: " \21d7";
 }
 
-a[href^="mailto"]:after {
+#content a[href^="mailto"]:after {
 	content: " \2709";
 }
 
-a:hover {
+#content a:hover {
 	color: #0BF;
 	text-decoration: none;
+}
+
+.nav-1, .nav-2 {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 100px;
+}
+
+.nav-1 {
+	left: 0;
+}
+
+.nav-2 {
+	right: 0;
+}
+
+nav a {
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 20px 0;
+
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s linear;
+	-ms-transition: all 0.4s linear;
+	-o-transition: all 0.4s linear;
+	transition: all 0.4s linear;
+}
+
+.nav-1 a {
+	-webkit-transform: translateX(-70px);
+	-moz-transform: translateX(-70px);
+	-ms-transform: translateX(-70px);
+	-o-transform: translateX(-70px);
+	transform: translateX(-70px);
+
+	border-radius: 0 10px 10px 0;
+}
+
+.nav-2 a {
+	-webkit-transform: translateX(70px);
+	-moz-transform: translateX(70px);
+	-ms-transform: translateX(70px);
+	-o-transform: translateX(70px);
+	transform: translateX(70px);
+
+	border-radius: 10px 0 0 10px;
+}
+
+nav a:hover {
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
+}
+
+.twitter {
+	background: #0BF;
+}
+
+.twitter:hover {
+	background: #06F;
 }

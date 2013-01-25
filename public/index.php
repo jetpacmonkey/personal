@@ -12,5 +12,9 @@
 		<br><br>
 		If you're interested in seeing the progress of this site, I'll be committing semi-regularly to a <a href="https://github.com/jetpacmonkey/personal">Github repository</a>.
 	</div>
+
+	<nav class="nav-1">
+		<a href="https://twitter.com/jetpacmonkey" class="twitter"></a>
+	</nav>
 </div>
 <?php foot("index"); ?>
