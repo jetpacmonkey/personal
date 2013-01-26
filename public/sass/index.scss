@@ -1,0 +1,111 @@
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+@import "compass/css3/box-sizing";
+
+$navWidth: 100px;
+$navStubWidth: 30px;
+$navHeight: 100px;
+
+body {
+	display: -webkit-flex;
+	display: flex;
+}
+
+h1 {
+	text-align: center;
+	font-style: italic;
+	font-size: 2em;
+	line-height: 1.5;
+	background: rgb(140, 140, 140);
+	background: rgba(180, 180, 180, 0.3);
+	margin: 0;
+	border-radius: 20px 20px 0 0;
+	color: #333;
+}
+
+#content {
+	padding: 2em 5em;
+	font-size: 1.3em;
+	line-height: 1.2;
+	color: #333;
+}
+
+#content a {
+	color: #08F;
+	font-style: italic;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 0.88em;
+	text-decoration: underline;
+}
+
+#content a[href^="http"]:after {
+	content: " \21d7";
+}
+
+#content a[href^="mailto"]:after {
+	content: " \2709";
+}
+
+#content a:hover {
+	color: #0BF;
+	text-decoration: none;
+}
+.main-nav {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: $navWidth;
+
+	& a {
+		display: block;
+		width: $navWidth;
+		height: $navHeight;
+		margin: 20px 0;
+
+		font-size: $navStubWidth;
+		text-align: right;
+		line-height: $navHeight;
+
+		@include box-sizing(border-box);
+		padding-right: 5px;
+
+		@include transition(all 0.4s linear);
+
+		&:hover {
+			@include translateX(0);
+		}
+	}
+}
+
+.nav-1 {
+	@extend .main-nav;
+
+	left: 0;
+
+	& a {
+		@include translateX($navStubWidth - $navWidth);
+
+		border-radius: 0 10px 10px 0;
+	}
+}
+
+.nav-2 {
+	@extend .main-nav;
+
+	right: 0;
+
+	& a {
+		@include translateX($navWidth - $navStubWidth);
+
+		border-radius: 10px 0 0 10px;
+	}
+}
+
+.twitter {
+	background: #0BF;
+	color: white;
+
+	&:hover {
+		background: #06F;
+	}
+}

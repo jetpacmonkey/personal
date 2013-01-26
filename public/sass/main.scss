@@ -1,0 +1,45 @@
+@import "compass/reset";
+@import "compass/css3/box-sizing";
+@import "compass/css3/font-face";
+
+@include font-face(JustVector,
+	font-files(
+		"JustVector/justvectorv2-webfont.woff", woff,
+		"JustVector/justvectorv2-webfont.ttf", ttf,
+		"JustVector/justvectorv2-webfont.svg", svg),
+	"JustVector/justvectorv2-webfont.eot");
+
+html, body {
+	height: 100%;
+	@include box-sizing(border-box);
+}
+
+body {
+	/* background from http://subtlepatterns.com/wild-oliva/ */
+	background: url(../img/wild_oliva.png);
+	font-size: 14px;
+	font-family: "Times New Roman", Times, serif;
+	margin: 0;
+	padding: 2%;
+}
+
+#main {
+	margin: auto;
+	width: 1000px;
+	background: white;
+	box-shadow: 0 0 20px #333;
+	border-radius: 20px;
+}
+
+.icon {
+	display: inline-block;
+
+	&:after {
+		content: attr(data-icon);
+	}
+}
+
+.icon-social {
+	@extend .icon;
+	font-family: "JustVector";
+}

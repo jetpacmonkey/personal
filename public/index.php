@@ -14,7 +14,7 @@
 	</div>
 
 	<nav class="nav-1">
-		<a href="https://twitter.com/jetpacmonkey" class="twitter"></a>
+		<a href="https://twitter.com/jetpacmonkey" class="twitter"><span class="icon-social" data-icon="t"></span></a>
 	</nav>
 </div>
 <?php foot("index"); ?>
