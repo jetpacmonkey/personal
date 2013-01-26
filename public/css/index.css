@@ -1,10 +1,10 @@
-/* line 9, ../sass/index.scss */
+/* line 10, ../sass/index.scss */
 body {
   display: -webkit-flex;
   display: flex;
 }
 
-/* line 14, ../sass/index.scss */
+/* line 15, ../sass/index.scss */
 h1 {
   text-align: center;
   font-style: italic;
@@ -17,7 +17,7 @@ h1 {
   color: #333;
 }
 
-/* line 26, ../sass/index.scss */
+/* line 27, ../sass/index.scss */
 #content {
   padding: 2em 5em;
   font-size: 1.3em;
@@ -25,7 +25,7 @@ h1 {
   color: #333;
 }
 
-/* line 33, ../sass/index.scss */
+/* line 34, ../sass/index.scss */
 #content a {
   color: #08F;
   font-style: italic;
@@ -34,90 +34,114 @@ h1 {
   text-decoration: underline;
 }
 
-/* line 41, ../sass/index.scss */
+/* line 42, ../sass/index.scss */
 #content a[href^="http"]:after {
   content: " \21d7";
 }
 
-/* line 45, ../sass/index.scss */
+/* line 46, ../sass/index.scss */
 #content a[href^="mailto"]:after {
   content: " \2709";
 }
 
-/* line 49, ../sass/index.scss */
+/* line 50, ../sass/index.scss */
 #content a:hover {
   color: #0BF;
   text-decoration: none;
 }
 
-/* line 53, ../sass/index.scss */
-.main-nav, .nav-1, .nav-2 {
+/* line 55, ../sass/index.scss */
+.nav-1, .nav-2 {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 100px;
+  width: 150px;
 }
-/* line 59, ../sass/index.scss */
-.main-nav a, .nav-1 a, .nav-2 a {
+/* line 61, ../sass/index.scss */
+.nav-1 a, .nav-2 a {
   display: block;
-  width: 100px;
+  width: 150px;
   height: 100px;
   margin: 20px 0;
-  font-size: 30px;
-  text-align: right;
+  text-align: left;
   line-height: 100px;
+  text-decoration: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding-right: 5px;
-  -webkit-transition: all 0.4s linear;
-  -moz-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  transition: all 0.4s linear;
+  padding: 0 5px;
 }
-/* line 74, ../sass/index.scss */
-.main-nav a:hover, .nav-1 a:hover, .nav-2 a:hover {
+/* line 75, ../sass/index.scss */
+.nav-1 a, .nav-2 a, .nav-1 a .descText, .nav-2 a .descText {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+/* line 79, ../sass/index.scss */
+.nav-1 a:hover, .nav-2 a:hover {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
 }
+/* line 82, ../sass/index.scss */
+.nav-1 a:hover .descText, .nav-2 a:hover .descText {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+/* line 88, ../sass/index.scss */
+.nav-1 .icon, .nav-2 .icon, .nav-1 .icon-social, .nav-2 .icon-social {
+  font-size: 30px;
+  display: block;
+  float: right;
+}
 
-/* line 80, ../sass/index.scss */
+/* line 95, ../sass/index.scss */
 .nav-1 {
   left: 0;
 }
-/* line 85, ../sass/index.scss */
+/* line 100, ../sass/index.scss */
 .nav-1 a {
-  -webkit-transform: translateX(-70px);
-  -moz-transform: translateX(-70px);
-  -ms-transform: translateX(-70px);
-  -o-transform: translateX(-70px);
-  transform: translateX(-70px);
+  -webkit-transform: translateX(-120px);
+  -moz-transform: translateX(-120px);
+  -ms-transform: translateX(-120px);
+  -o-transform: translateX(-120px);
+  transform: translateX(-120px);
   border-radius: 0 10px 10px 0;
 }
 
-/* line 92, ../sass/index.scss */
+/* line 107, ../sass/index.scss */
 .nav-2 {
   right: 0;
 }
-/* line 97, ../sass/index.scss */
+/* line 112, ../sass/index.scss */
 .nav-2 a {
-  -webkit-transform: translateX(70px);
-  -moz-transform: translateX(70px);
-  -ms-transform: translateX(70px);
-  -o-transform: translateX(70px);
-  transform: translateX(70px);
+  -webkit-transform: translateX(120px);
+  -moz-transform: translateX(120px);
+  -ms-transform: translateX(120px);
+  -o-transform: translateX(120px);
+  transform: translateX(120px);
   border-radius: 10px 0 0 10px;
 }
 
-/* line 104, ../sass/index.scss */
+/* line 119, ../sass/index.scss */
 .twitter {
   background: #0BF;
   color: white;
 }
-/* line 108, ../sass/index.scss */
+/* line 123, ../sass/index.scss */
 .twitter:hover {
-  background: #06F;
+  background: #08F;
+}
+
+/* line 128, ../sass/index.scss */
+.facebook {
+  background: #00F;
+  color: white;
+}
+/* line 132, ../sass/index.scss */
+.facebook:hover {
+  background: #05C;
 }

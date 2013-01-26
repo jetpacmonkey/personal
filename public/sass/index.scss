@@ -1,8 +1,9 @@
 @import "compass/css3/transform";
 @import "compass/css3/transition";
 @import "compass/css3/box-sizing";
+@import "compass/css3/opacity";
 
-$navWidth: 100px;
+$navWidth: 150px;
 $navStubWidth: 30px;
 $navHeight: 100px;
 
@@ -50,7 +51,8 @@ h1 {
 	color: #0BF;
 	text-decoration: none;
 }
-.main-nav {
+
+%main-nav {
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -62,23 +64,36 @@ h1 {
 		height: $navHeight;
 		margin: 20px 0;
 
-		font-size: $navStubWidth;
-		text-align: right;
+		text-align: left;
 		line-height: $navHeight;
 
-		@include box-sizing(border-box);
-		padding-right: 5px;
+		text-decoration: none;
 
-		@include transition(all 0.4s linear);
+		@include box-sizing(border-box);
+		padding: 0 5px;
+
+		&, & .descText {
+			@include transition(all 0.3s linear);
+		}
 
 		&:hover {
 			@include translateX(0);
+
+			& .descText {
+				@include opacity(0.8);
+			}
 		}
+	}
+
+	& .icon, & .icon-social {
+		font-size: $navStubWidth;
+		display: block;
+		float: right;
 	}
 }
 
 .nav-1 {
-	@extend .main-nav;
+	@extend %main-nav;
 
 	left: 0;
 
@@ -90,7 +105,7 @@ h1 {
 }
 
 .nav-2 {
-	@extend .main-nav;
+	@extend %main-nav;
 
 	right: 0;
 
@@ -106,6 +121,15 @@ h1 {
 	color: white;
 
 	&:hover {
-		background: #06F;
+		background: #08F;
+	}
+}
+
+.facebook {
+	background: #00F;
+	color: white;
+
+	&:hover {
+		background: #05C;
 	}
 }
