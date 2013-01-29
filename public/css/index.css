@@ -1,10 +1,4 @@
-/* line 10, ../sass/index.scss */
-body {
-  display: -webkit-flex;
-  display: flex;
-}
-
-/* line 15, ../sass/index.scss */
+/* line 11, ../sass/index.scss */
 h1 {
   text-align: center;
   font-style: italic;
@@ -17,7 +11,7 @@ h1 {
   color: #333;
 }
 
-/* line 27, ../sass/index.scss */
+/* line 23, ../sass/index.scss */
 #content {
   padding: 2em 5em;
   font-size: 1.3em;
@@ -25,7 +19,7 @@ h1 {
   color: #333;
 }
 
-/* line 34, ../sass/index.scss */
+/* line 30, ../sass/index.scss */
 #content a {
   color: #08F;
   font-style: italic;
@@ -34,75 +28,85 @@ h1 {
   text-decoration: underline;
 }
 
-/* line 42, ../sass/index.scss */
+/* line 38, ../sass/index.scss */
 #content a[href^="http"]:after {
   content: " \21d7";
 }
 
-/* line 46, ../sass/index.scss */
+/* line 42, ../sass/index.scss */
 #content a[href^="mailto"]:after {
   content: " \2709";
 }
 
-/* line 50, ../sass/index.scss */
+/* line 46, ../sass/index.scss */
 #content a:hover {
   color: #0BF;
   text-decoration: none;
 }
 
-/* line 55, ../sass/index.scss */
+/* line 51, ../sass/index.scss */
 .nav-1, .nav-2 {
+  width: 150px;
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 150px;
+  overflow: hidden;
 }
-/* line 61, ../sass/index.scss */
+/* line 58, ../sass/index.scss */
 .nav-1 a, .nav-2 a {
   display: block;
   width: 150px;
   height: 100px;
   margin: 20px 0;
-  text-align: left;
   line-height: 100px;
   text-decoration: none;
+  text-align: center;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 5px;
+  padding: 0 2px;
 }
-/* line 75, ../sass/index.scss */
+/* line 72, ../sass/index.scss */
 .nav-1 a, .nav-2 a, .nav-1 a .descText, .nav-2 a .descText {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-/* line 79, ../sass/index.scss */
+/* line 76, ../sass/index.scss */
 .nav-1 a:hover, .nav-2 a:hover {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
   transform: translateX(0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
 }
-/* line 82, ../sass/index.scss */
+/* line 80, ../sass/index.scss */
 .nav-1 a:hover .descText, .nav-2 a:hover .descText {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
-/* line 88, ../sass/index.scss */
+/* line 86, ../sass/index.scss */
 .nav-1 .icon, .nav-2 .icon, .nav-1 .icon-social, .nav-2 .icon-social {
   font-size: 30px;
   display: block;
-  float: right;
+}
+/* line 91, ../sass/index.scss */
+.nav-1 header, .nav-2 header {
+  background: #CCC;
+  font-size: 1.3em;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
 }
 
-/* line 95, ../sass/index.scss */
+/* line 100, ../sass/index.scss */
 .nav-1 {
   left: 0;
 }
-/* line 100, ../sass/index.scss */
+/* line 105, ../sass/index.scss */
 .nav-1 a {
   -webkit-transform: translateX(-120px);
   -moz-transform: translateX(-120px);
@@ -111,12 +115,20 @@ h1 {
   transform: translateX(-120px);
   border-radius: 0 10px 10px 0;
 }
+/* line 111, ../sass/index.scss */
+.nav-1 .icon, .nav-1 .icon-social {
+  float: right;
+}
+/* line 115, ../sass/index.scss */
+.nav-1 header {
+  border-radius: 0 0 10px 0;
+}
 
-/* line 107, ../sass/index.scss */
+/* line 120, ../sass/index.scss */
 .nav-2 {
   right: 0;
 }
-/* line 112, ../sass/index.scss */
+/* line 125, ../sass/index.scss */
 .nav-2 a {
   -webkit-transform: translateX(120px);
   -moz-transform: translateX(120px);
@@ -125,23 +137,96 @@ h1 {
   transform: translateX(120px);
   border-radius: 10px 0 0 10px;
 }
+/* line 131, ../sass/index.scss */
+.nav-2 .icon, .nav-2 .icon-social {
+  float: left;
+}
+/* line 135, ../sass/index.scss */
+.nav-2 header {
+  border-radius: 0 0 0 10px;
+}
 
-/* line 119, ../sass/index.scss */
+@media (max-width: 600px) {
+  /* line 140, ../sass/index.scss */
+  .nav-1, .nav-2 {
+    position: static;
+    width: 50%;
+  }
+  /* line 145, ../sass/index.scss */
+  .nav-1 header, .nav-2 header {
+    border-radius: 0;
+  }
+  /* line 149, ../sass/index.scss */
+  .nav-1 a, .nav-2 a {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    margin: 2px 0;
+    border-radius: 0;
+    width: auto;
+  }
+  /* line 156, ../sass/index.scss */
+  .nav-1 .icon, .nav-2 .icon, .nav-1 .icon-social, .nav-2 .icon-social {
+    float: none;
+    height: 70px;
+    line-height: 70px;
+  }
+  /* line 162, ../sass/index.scss */
+  .nav-1 .descText, .nav-2 .descText {
+    height: 30px;
+    line-height: 30px;
+    display: block;
+  }
+}
+
+/* line 170, ../sass/index.scss */
 .twitter {
   background: #0BF;
   color: white;
 }
-/* line 123, ../sass/index.scss */
+/* line 174, ../sass/index.scss */
 .twitter:hover {
   background: #08F;
 }
 
-/* line 128, ../sass/index.scss */
+/* line 179, ../sass/index.scss */
 .facebook {
   background: #00F;
   color: white;
 }
-/* line 132, ../sass/index.scss */
+/* line 183, ../sass/index.scss */
 .facebook:hover {
   background: #05C;
+}
+
+/* line 188, ../sass/index.scss */
+.projects {
+  background: #804;
+  color: white;
+}
+/* line 192, ../sass/index.scss */
+.projects:hover {
+  background: #A70;
+}
+
+/* line 197, ../sass/index.scss */
+.music {
+  background: #084;
+  color: white;
+}
+/* line 201, ../sass/index.scss */
+.music:hover {
+  background: #0A7;
+}
+
+/* line 206, ../sass/index.scss */
+.blog {
+  background: #3AA;
+  color: white;
+}
+/* line 210, ../sass/index.scss */
+.blog:hover {
+  background: #7AC;
 }

@@ -2,15 +2,11 @@
 @import "compass/css3/transition";
 @import "compass/css3/box-sizing";
 @import "compass/css3/opacity";
+@import "_bits";
 
 $navWidth: 150px;
 $navStubWidth: 30px;
 $navHeight: 100px;
-
-body {
-	display: -webkit-flex;
-	display: flex;
-}
 
 h1 {
 	text-align: center;
@@ -53,10 +49,11 @@ h1 {
 }
 
 %main-nav {
+	width: $navWidth;
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	width: $navWidth;
+	overflow: hidden;
 
 	& a {
 		display: block;
@@ -64,13 +61,13 @@ h1 {
 		height: $navHeight;
 		margin: 20px 0;
 
-		text-align: left;
 		line-height: $navHeight;
 
 		text-decoration: none;
+		text-align: center;
 
 		@include box-sizing(border-box);
-		padding: 0 5px;
+		padding: 0 2px;
 
 		&, & .descText {
 			@include transition(all 0.3s linear);
@@ -78,6 +75,7 @@ h1 {
 
 		&:hover {
 			@include translateX(0);
+			@include opacity(0.7);
 
 			& .descText {
 				@include opacity(0.8);
@@ -88,7 +86,14 @@ h1 {
 	& .icon, & .icon-social {
 		font-size: $navStubWidth;
 		display: block;
-		float: right;
+	}
+
+	& header {
+		background: #CCC;
+		font-size: 1.3em;
+		line-height: 1.5;
+		text-align: center;
+		margin: 0;
 	}
 }
 
@@ -102,6 +107,14 @@ h1 {
 
 		border-radius: 0 10px 10px 0;
 	}
+
+	& .icon, & .icon-social {
+		float: right;
+	}
+
+	& header {
+		border-radius: 0 0 10px 0;
+	}
 }
 
 .nav-2 {
@@ -113,6 +126,44 @@ h1 {
 		@include translateX($navWidth - $navStubWidth);
 
 		border-radius: 10px 0 0 10px;
+	}
+
+	& .icon, & .icon-social {
+		float: left;
+	}
+
+	& header {
+		border-radius: 0 0 0 10px;
+	}
+}
+
+%main-nav {
+	@include breakpoint(baby-bear) {
+		position: static;
+		width: 50%;
+
+		& header {
+			border-radius: 0;
+		}
+
+		& a {
+			@include translateX(0);
+			margin: 2px 0;
+			border-radius: 0;
+			width: auto;
+		}
+
+		& .icon, & .icon-social {
+			float: none;
+			height: $navHeight * 0.7;
+			line-height: $navHeight * 0.7;
+		}
+
+		& .descText {
+			height: $navHeight * 0.3;
+			line-height: $navHeight * 0.3;
+			display: block;
+		}
 	}
 }
 
@@ -131,5 +182,32 @@ h1 {
 
 	&:hover {
 		background: #05C;
+	}
+}
+
+.projects {
+	background: #804;
+	color: white;
+
+	&:hover {
+		background: #A70;
+	}
+}
+
+.music {
+	background: #084;
+	color: white;
+
+	&:hover {
+		background: #0A7;
+	}
+}
+
+.blog {
+	background: #3AA;
+	color: white;
+
+	&:hover {
+		background: #7AC;
 	}
 }

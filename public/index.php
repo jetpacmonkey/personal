@@ -1,5 +1,34 @@
 <?php include("../bits/functions.php"); ?>
 <?php head("Jeremy Tice", "index"); ?>
+<div class="navWrapper">
+	<nav class="nav-1">
+		<header>Social</header>
+		<a href="https://twitter.com/jetpacmonkey" class="twitter">
+			<span class="descText">@jetpacmonkey</span>
+			<span class="icon-social" data-icon="t"></span>
+		</a>
+		<a href="https://facebook.com/jetpacmonkey" class="facebook">
+			<span class="descText">Jeremy Tice</span>
+			<span class="icon-social" data-icon="F"></span>
+		</a>
+	</nav>
+
+	<nav class="nav-2">
+		<header>Content</header>
+		<a href="/projects" class="projects">
+			<span class="descText">Projects</span>
+			<span class="icon" data-icon="+"></span>
+		</a>
+		<a href="/music" class="music">
+			<span class="descText">Music</span>
+			<span class="icon" data-icon="*"></span>
+		</a>
+		<a href="/blog" class="blog">
+			<span class="descText">Blog</span>
+			<span class="icon" data-icon="\"></span>
+		</a>
+	</nav>
+</div>
 <div id="main">
 	<h1>Welcome</h1>
 
@@ -12,21 +41,5 @@
 		<br><br>
 		If you're interested in seeing the progress of this site, I'll be committing semi-regularly to a <a href="https://github.com/jetpacmonkey/personal">Github repository</a>.
 	</div>
-
-	<nav class="nav-1">
-		<a href="https://twitter.com/jetpacmonkey" class="twitter">
-			<span class="descText">@jetpacmonkey</span>
-			<span class="icon-social" data-icon="t"></span>
-		</a>
-		<a href="https://facebook.com/jetpacmonkey" class="facebook">
-			<span class="descText">Jeremy Tice</span>
-			<span class="icon-social" data-icon="F"></span>
-		</a>
-	</nav>
-
-	<nav class="nav-2">
-		<a href="/projects" class="projects"><span class="icon" data-icon=""></span></a>
-		<a href="/music" class="music"><span class="icon" data-icon=""></span></a>
-	</nav>
 </div>
 <?php foot("index"); ?>

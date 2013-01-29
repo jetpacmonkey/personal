@@ -1,6 +1,7 @@
 @import "compass/reset";
 @import "compass/css3/box-sizing";
 @import "compass/css3/font-face";
+@import "_bits";
 
 @include font-face(JustVector,
 	font-files(
@@ -8,6 +9,13 @@
 		"JustVector/justvectorv2-webfont.ttf", ttf,
 		"JustVector/justvectorv2-webfont.svg", svg),
 	"JustVector/justvectorv2-webfont.eot");
+
+@include font-face(Typicon,
+	font-files(
+		"typicons/typicons-regular-webfont.woff", woff,
+		"typicons/typicons-regular-webfont.ttf", ttf,
+		"typicons/typicons-regular-webfont.svg", svg),
+	"typicons/typicons-regular-webfont.eot");
 
 html, body {
 	height: 100%;
@@ -24,8 +32,9 @@ body {
 }
 
 #main {
-	margin: auto;
+	margin: 2% auto;
 	width: 1000px;
+	min-height: 96%;
 	background: white;
 	box-shadow: 0 0 20px #333;
 	border-radius: 20px;
@@ -33,6 +42,7 @@ body {
 
 .icon {
 	display: inline-block;
+	font-family: "Typicon";
 
 	&:after {
 		content: attr(data-icon);

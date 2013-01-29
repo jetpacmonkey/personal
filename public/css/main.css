@@ -69,7 +69,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url('/css/fonts/JustVector/justvectorv2-webfont.eot?#iefix') format('eot'), url('/css/fonts/JustVector/justvectorv2-webfont.woff') format('woff'), url('/css/fonts/JustVector/justvectorv2-webfont.ttf') format('truetype'), url('/css/fonts/JustVector/justvectorv2-webfont.svg') format('svg');
 }
 
-/* line 12, ../sass/main.scss */
+@font-face {
+  font-family: "Typicon";
+  src: url('/css/fonts/typicons/typicons-regular-webfont.eot');
+  src: url('/css/fonts/typicons/typicons-regular-webfont.eot?#iefix') format('eot'), url('/css/fonts/typicons/typicons-regular-webfont.woff') format('woff'), url('/css/fonts/typicons/typicons-regular-webfont.ttf') format('truetype'), url('/css/fonts/typicons/typicons-regular-webfont.svg') format('svg');
+}
+
+/* line 20, ../sass/main.scss */
 html, body {
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -77,7 +83,7 @@ html, body {
   box-sizing: border-box;
 }
 
-/* line 17, ../sass/main.scss */
+/* line 25, ../sass/main.scss */
 body {
   /* background from http://subtlepatterns.com/wild-oliva/ */
   background: url(../img/wild_oliva.png);
@@ -87,25 +93,27 @@ body {
   padding: 2%;
 }
 
-/* line 26, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 #main {
-  margin: auto;
+  margin: 2% auto;
   width: 1000px;
+  min-height: 96%;
   background: white;
   box-shadow: 0 0 20px #333333;
   border-radius: 20px;
 }
 
-/* line 34, ../sass/main.scss */
+/* line 43, ../sass/main.scss */
 .icon, .icon-social {
   display: inline-block;
+  font-family: "Typicon";
 }
-/* line 37, ../sass/main.scss */
+/* line 47, ../sass/main.scss */
 .icon:after, .icon-social:after {
   content: attr(data-icon);
 }
 
-/* line 42, ../sass/main.scss */
+/* line 52, ../sass/main.scss */
 .icon-social {
   font-family: "JustVector";
 }
