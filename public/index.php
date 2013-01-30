@@ -4,28 +4,28 @@
 	<nav class="nav-1">
 		<header>Social</header>
 		<a href="https://twitter.com/jetpacmonkey" class="twitter">
-			<span class="descText">@jetpacmonkey</span>
 			<span class="icon-social" data-icon="t"></span>
+			<span class="descText">@jetpacmonkey</span>
 		</a>
 		<a href="https://facebook.com/jetpacmonkey" class="facebook">
-			<span class="descText">Jeremy Tice</span>
 			<span class="icon-social" data-icon="F"></span>
+			<span class="descText">Jeremy Tice</span>
 		</a>
 	</nav>
 
 	<nav class="nav-2">
 		<header>Content</header>
 		<a href="/projects" class="projects">
-			<span class="descText">Projects</span>
 			<span class="icon" data-icon="+"></span>
+			<span class="descText">Projects</span>
 		</a>
 		<a href="/music" class="music">
-			<span class="descText">Music</span>
 			<span class="icon" data-icon="*"></span>
+			<span class="descText">Music</span>
 		</a>
 		<a href="/blog" class="blog">
-			<span class="descText">Blog</span>
 			<span class="icon" data-icon="\"></span>
+			<span class="descText">Blog</span>
 		</a>
 	</nav>
 </div>
