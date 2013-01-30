@@ -20,7 +20,7 @@ h1 {
 }
 
 #content {
-	padding: 2em 5em;
+	padding: 2em 6%;
 	font-size: 1.3em;
 	line-height: 1.2;
 	color: #333;
@@ -61,7 +61,7 @@ h1 {
 	width: $navWidth;
 	position: absolute;
 	top: 0;
-	bottom: 0;
+	min-height: 100%;
 	overflow: hidden;
 
 	& a {

@@ -114,23 +114,24 @@ body {
   /* line 38, ../sass/main.scss */
   #main {
     max-width: none;
+    min-height: 0;
     width: 100%;
     margin: 2% 0;
     border-radius: 0;
   }
 }
 
-/* line 56, ../sass/main.scss */
+/* line 57, ../sass/main.scss */
 .icon, .icon-social {
   display: inline-block;
   font-family: "Typicon";
 }
-/* line 60, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 .icon:after, .icon-social:after {
   content: attr(data-icon);
 }
 
-/* line 65, ../sass/main.scss */
+/* line 66, ../sass/main.scss */
 .icon-social {
   font-family: "JustVector";
 }
