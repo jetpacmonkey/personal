@@ -29,15 +29,28 @@ body {
 	font-family: "Times New Roman", Times, serif;
 	margin: 0;
 	padding: 2%;
+
+	@include breakpoint(baby-bear) {
+		padding: 0;
+	}
 }
 
 #main {
 	margin: 2% auto;
 	width: 1000px;
+	max-width: 90%;
 	min-height: 96%;
 	background: white;
 	box-shadow: 0 0 20px #333;
 	border-radius: 20px;
+	overflow: auto;
+
+	@include breakpoint(baby-bear) {
+		max-width: none;
+		width: 100%;
+		margin: 2% 0;
+		border-radius: 0;
+	}
 }
 
 .icon {
