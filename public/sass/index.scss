@@ -48,6 +48,16 @@ h1 {
 	text-decoration: none;
 }
 
+.navWrapper:after {
+	/* clearfix */
+	display: block;
+	content: ".";
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+
 %main-nav {
 	width: $navWidth;
 	position: absolute;
