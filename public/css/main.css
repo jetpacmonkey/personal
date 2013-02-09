@@ -75,7 +75,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url('/css/fonts/typicons/typicons-regular-webfont.eot?#iefix') format('eot'), url('/css/fonts/typicons/typicons-regular-webfont.woff') format('woff'), url('/css/fonts/typicons/typicons-regular-webfont.ttf') format('truetype'), url('/css/fonts/typicons/typicons-regular-webfont.svg') format('svg');
 }
 
-/* line 20, ../sass/main.scss */
+/* line 24, ../sass/main.scss */
 html, body {
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -83,7 +83,7 @@ html, body {
   box-sizing: border-box;
 }
 
-/* line 25, ../sass/main.scss */
+/* line 29, ../sass/main.scss */
 body {
   /* background from http://subtlepatterns.com/wild-oliva/ */
   background: url(../img/wild_oliva.png);
@@ -93,13 +93,13 @@ body {
   padding: 2%;
 }
 @media (max-width: 600px) {
-  /* line 25, ../sass/main.scss */
+  /* line 29, ../sass/main.scss */
   body {
     padding: 0;
   }
 }
 
-/* line 38, ../sass/main.scss */
+/* line 42, ../sass/main.scss */
 #main {
   margin: 2% auto;
   width: 1000px;
@@ -111,7 +111,7 @@ body {
   overflow: auto;
 }
 @media (max-width: 600px) {
-  /* line 38, ../sass/main.scss */
+  /* line 42, ../sass/main.scss */
   #main {
     max-width: none;
     min-height: 0;
@@ -121,17 +121,244 @@ body {
   }
 }
 
-/* line 57, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 .icon, .icon-social {
   display: inline-block;
   font-family: "Typicon";
 }
-/* line 61, ../sass/main.scss */
+/* line 65, ../sass/main.scss */
 .icon:after, .icon-social:after {
   content: attr(data-icon);
 }
 
-/* line 66, ../sass/main.scss */
+/* line 70, ../sass/main.scss */
 .icon-social {
   font-family: "JustVector";
+}
+
+/* line 77, ../sass/main.scss */
+.navWrapper:after {
+  /* clearfix */
+  display: block;
+  content: ".";
+  visibility: hidden;
+  clear: both;
+  height: 0;
+  line-height: 0;
+}
+
+/* line 87, ../sass/main.scss */
+.nav-1, .nav-2 {
+  width: 150px;
+  position: absolute;
+  top: 0;
+  min-height: 100%;
+  overflow: hidden;
+}
+/* line 94, ../sass/main.scss */
+.nav-1 a, .nav-2 a {
+  position: relative;
+  display: block;
+  width: 150px;
+  height: 100px;
+  margin: 20px 0;
+  line-height: 100px;
+  text-decoration: none;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* line 108, ../sass/main.scss */
+.nav-1 a, .nav-2 a, .nav-1 a .descText, .nav-2 a .descText {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+/* line 112, ../sass/main.scss */
+.nav-1 a:hover, .nav-2 a:hover {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+/* line 116, ../sass/main.scss */
+.nav-1 a:hover .descText, .nav-2 a:hover .descText {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+}
+/* line 122, ../sass/main.scss */
+.nav-1 .icon, .nav-2 .icon, .nav-1 .icon-social, .nav-2 .icon-social, .nav-1 .icon-social, .nav-2 .icon-social {
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+/* line 131, ../sass/main.scss */
+.nav-1 header, .nav-2 header {
+  background: #CCC;
+  font-size: 1.3em;
+  line-height: 1.5;
+  text-align: center;
+  margin: 0;
+}
+
+/* line 140, ../sass/main.scss */
+.nav-1 {
+  left: 0;
+}
+/* line 145, ../sass/main.scss */
+.nav-1 a {
+  -webkit-transform: translateX(-120px);
+  -moz-transform: translateX(-120px);
+  -ms-transform: translateX(-120px);
+  -o-transform: translateX(-120px);
+  transform: translateX(-120px);
+  border-radius: 0 10px 10px 0;
+}
+/* line 151, ../sass/main.scss */
+.nav-1 .icon, .nav-1 .icon-social {
+  right: 0;
+}
+/* line 155, ../sass/main.scss */
+.nav-1 .descText {
+  padding-right: 30px;
+}
+/* line 159, ../sass/main.scss */
+.nav-1 header {
+  border-radius: 0 0 10px 0;
+}
+@media (max-width: 600px) {
+  /* line 140, ../sass/main.scss */
+  .nav-1 {
+    float: left;
+  }
+}
+
+/* line 168, ../sass/main.scss */
+.nav-2 {
+  right: 0;
+}
+/* line 173, ../sass/main.scss */
+.nav-2 a {
+  -webkit-transform: translateX(120px);
+  -moz-transform: translateX(120px);
+  -ms-transform: translateX(120px);
+  -o-transform: translateX(120px);
+  transform: translateX(120px);
+  border-radius: 10px 0 0 10px;
+}
+/* line 179, ../sass/main.scss */
+.nav-2 .icon, .nav-2 .icon-social {
+  left: 0;
+}
+/* line 183, ../sass/main.scss */
+.nav-2 .descText {
+  padding-left: 30px;
+}
+/* line 187, ../sass/main.scss */
+.nav-2 header {
+  border-radius: 0 0 0 10px;
+}
+@media (max-width: 600px) {
+  /* line 168, ../sass/main.scss */
+  .nav-2 {
+    float: right;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 196, ../sass/main.scss */
+  .nav-1, .nav-2 {
+    position: static;
+    width: 50%;
+  }
+  /* line 201, ../sass/main.scss */
+  .nav-1 header, .nav-2 header {
+    border-radius: 0;
+  }
+  /* line 205, ../sass/main.scss */
+  .nav-1 a, .nav-2 a {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    transform: translateX(0);
+    margin: 2px 0;
+    border-radius: 0;
+    width: auto;
+  }
+  /* line 212, ../sass/main.scss */
+  .nav-1 .icon, .nav-2 .icon, .nav-1 .icon-social, .nav-2 .icon-social {
+    position: static;
+    width: 100%;
+    padding-top: 10px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 40px;
+  }
+  /* line 221, ../sass/main.scss */
+  .nav-1 .descText, .nav-2 .descText {
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    padding: 0;
+    font-size: 1.3em;
+  }
+}
+
+/* line 231, ../sass/main.scss */
+.twitter {
+  background: #0BF;
+  color: white;
+}
+/* line 235, ../sass/main.scss */
+.twitter:hover {
+  background: #08F;
+}
+
+/* line 240, ../sass/main.scss */
+.facebook {
+  background: #00F;
+  color: white;
+}
+/* line 244, ../sass/main.scss */
+.facebook:hover {
+  background: #05C;
+}
+
+/* line 249, ../sass/main.scss */
+.projects {
+  background: #804;
+  color: white;
+}
+/* line 253, ../sass/main.scss */
+.projects:hover {
+  background: #A70;
+}
+
+/* line 258, ../sass/main.scss */
+.music {
+  background: #084;
+  color: white;
+}
+/* line 262, ../sass/main.scss */
+.music:hover {
+  background: #0A7;
+}
+
+/* line 267, ../sass/main.scss */
+.blog {
+  background: #3AA;
+  color: white;
+}
+/* line 271, ../sass/main.scss */
+.blog:hover {
+  background: #7AC;
 }

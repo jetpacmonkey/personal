@@ -2,11 +2,11 @@ RewriteEngine on
 RewriteBase /
 AddDefaultCharset UTF-8
 
-#any kind of post (blog, project, music, etc)
-RewriteRule ^post/([a-zA-Z0-9]*)/([0-9]*)/([a-zA-Z0-9-]*)/?$ "./post.php?%{QUERY_STRING}&type=$1&id=$2&slug=$3" [L]
+#any individual post (blog, project, music, etc)
+RewriteRule ^post/([a-zA-Z0-9]*)/([0-9]*)/([a-zA-Z0-9-]*)/?$ "pages/post.php?%{QUERY_STRING}&type=$1&id=$2&slug=$3" [L]
 
 #list of posts
-RewriteRule ^posts/([a-zA-Z0-9]*)/?$ "./posts.php?%{QUERY_STRING}&type=$1" [L]
+RewriteRule ^posts/([a-zA-Z0-9]*)/?$ "pages/posts.php?%{QUERY_STRING}&type=$1" [L]
 
 <FilesMatch "\.(rb|scss)$">
   Order allow,deny

@@ -1,7 +1,11 @@
+@import "compass";
+
 @import "compass/reset";
-@import "compass/css3/box-sizing";
-@import "compass/css3/font-face";
 @import "_bits";
+
+$navWidth: 150px;
+$navStubWidth: 30px;
+$navHeight: 100px;
 
 @include font-face(JustVector,
 	font-files(
@@ -66,4 +70,205 @@ body {
 .icon-social {
 	@extend .icon;
 	font-family: "JustVector";
+}
+
+
+//NAVIGATION
+.navWrapper:after {
+	/* clearfix */
+	display: block;
+	content: ".";
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	line-height: 0;
+}
+
+%main-nav {
+	width: $navWidth;
+	position: absolute;
+	top: 0;
+	min-height: 100%;
+	overflow: hidden;
+
+	& a {
+		position: relative;
+		display: block;
+		width: $navWidth;
+		height: $navHeight;
+		margin: 20px 0;
+
+		line-height: $navHeight;
+
+		text-decoration: none;
+		text-align: center;
+
+		@include box-sizing(border-box);
+
+		&, & .descText {
+			@include transition(all 0.3s linear);
+		}
+
+		&:hover {
+			@include translateX(0);
+			@include opacity(0.7);
+
+			& .descText {
+				@include opacity(0.8);
+			}
+		}
+	}
+
+	& .icon, & .icon-social {
+		font-size: $navStubWidth;
+		width: $navStubWidth;
+		text-align: center;
+		display: block;
+		position: absolute;
+		top: 0;
+	}
+
+	& header {
+		background: #CCC;
+		font-size: 1.3em;
+		line-height: 1.5;
+		text-align: center;
+		margin: 0;
+	}
+}
+
+.nav-1 {
+	@extend %main-nav;
+
+	left: 0;
+
+	& a {
+		@include translateX($navStubWidth - $navWidth);
+
+		border-radius: 0 10px 10px 0;
+	}
+
+	& .icon {
+		right: 0;
+	}
+
+	& .descText {
+		padding-right: $navStubWidth;
+	}
+
+	& header {
+		border-radius: 0 0 10px 0;
+	}
+
+	@include breakpoint(baby-bear) {
+		float: left;
+	}
+}
+
+.nav-2 {
+	@extend %main-nav;
+
+	right: 0;
+
+	& a {
+		@include translateX($navWidth - $navStubWidth);
+
+		border-radius: 10px 0 0 10px;
+	}
+
+	& .icon {
+		left: 0;
+	}
+
+	& .descText {
+		padding-left: $navStubWidth;
+	}
+
+	& header {
+		border-radius: 0 0 0 10px;
+	}
+
+	@include breakpoint(baby-bear) {
+		float: right;
+	}
+}
+
+%main-nav {
+	@include breakpoint(baby-bear) {
+		position: static;
+		width: 50%;
+
+		& header {
+			border-radius: 0;
+		}
+
+		& a {
+			@include translateX(0);
+			margin: 2px 0;
+			border-radius: 0;
+			width: auto;
+		}
+
+		& .icon {
+			position: static;
+			width: 100%;
+			padding-top: $navHeight * 0.1;
+			height: $navHeight * 0.5;
+			line-height: $navHeight * 0.5;
+			font-size: $navHeight * 0.4;
+		}
+
+		& .descText {
+			height: $navHeight * 0.4;
+			line-height: $navHeight * 0.4;
+			display: block;
+			padding: 0;
+			font-size: 1.3em;
+		}
+	}
+}
+
+.twitter {
+	background: #0BF;
+	color: white;
+
+	&:hover {
+		background: #08F;
+	}
+}
+
+.facebook {
+	background: #00F;
+	color: white;
+
+	&:hover {
+		background: #05C;
+	}
+}
+
+.projects {
+	background: #804;
+	color: white;
+
+	&:hover {
+		background: #A70;
+	}
+}
+
+.music {
+	background: #084;
+	color: white;
+
+	&:hover {
+		background: #0A7;
+	}
+}
+
+.blog {
+	background: #3AA;
+	color: white;
+
+	&:hover {
+		background: #7AC;
+	}
 }
