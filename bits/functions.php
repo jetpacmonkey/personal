@@ -7,6 +7,7 @@ function head($title, $page_name) {
 		<title><?php echo $title; ?></title>
 		<link rel="stylesheet" type="text/css" href="css/main.css">
 		<link rel="stylesheet" type="text/css" href="css/<?php echo $page_name; ?>.css">
+		<meta name="viewport" content="width=device-width">
 	</head>
 	<body><?php
 }
@@ -20,4 +21,8 @@ function foot($page_name) {
 	<?php
 }
 
+include_once "markdown_extra/markdown.php";
+function md($txt) {
+	return Markdown($txt);
+}
 ?>

@@ -15,15 +15,15 @@
 
 	<nav class="nav-2">
 		<header>Content</header>
-		<a href="/projects" class="projects">
+		<a href="/posts/projects" class="projects">
 			<span class="icon" data-icon="+"></span>
 			<span class="descText">Projects</span>
 		</a>
-		<a href="/music" class="music">
+		<a href="/posts/music" class="music">
 			<span class="icon" data-icon="*"></span>
 			<span class="descText">Music</span>
 		</a>
-		<a href="/blog" class="blog">
+		<a href="/posts/blog" class="blog">
 			<span class="icon" data-icon="\"></span>
 			<span class="descText">Blog</span>
 		</a>
