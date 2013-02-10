@@ -9,3 +9,10 @@
     @media (max-width: 600px)  { @content; }
   }
 }
+
+@mixin calc($prop, $val, $fallback) {
+	#{$prop}: $fallback;
+	#{$prop}: -webkit-calc(#{$val});
+	#{$prop}: -moz-calc(#{$val});
+	#{$prop}: calc(#{$val});
+}

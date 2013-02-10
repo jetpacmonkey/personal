@@ -24,12 +24,42 @@ $navHeight: 100px;
 html, body {
 	height: 100%;
 	@include box-sizing(border-box);
+	font-size: 14px;
 }
 
-body {
+$pageTitleHeight: 30px;
+.pageTitle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: $pageTitleHeight;
+	line-height: $pageTitleHeight;
+	font-size: 1.5em;
+	font-weight: bold;
+	@include background(linear-gradient(top, #999, #CCC));
+
+	a {
+		font-style: italic;
+		color: #333;
+		margin: 0 20px;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+#body {
+	position: absolute;
+	top: $pageTitleHeight;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+	overflow: auto;
+
 	/* background from http://subtlepatterns.com/wild-oliva/ */
 	background: url(../img/wild_oliva.png);
-	font-size: 14px;
 	font-family: "Times New Roman", Times, serif;
 	margin: 0;
 	padding: 2%;
@@ -91,7 +121,7 @@ body {
 	min-height: 100%;
 	overflow: hidden;
 
-	& a {
+	a {
 		position: relative;
 		display: block;
 		width: $navWidth;
@@ -116,19 +146,24 @@ body {
 			& .descText {
 				@include opacity(0.8);
 			}
+
+			& .icon, & .icon-social {
+				text-shadow: none;
+			}
 		}
 	}
 
-	& .icon, & .icon-social {
+	.icon, .icon-social {
 		font-size: $navStubWidth;
 		width: $navStubWidth;
 		text-align: center;
 		display: block;
 		position: absolute;
 		top: 0;
+		text-shadow: 0 0 8px #000;
 	}
 
-	& header {
+	header {
 		background: #CCC;
 		font-size: 1.3em;
 		line-height: 1.5;
@@ -142,21 +177,21 @@ body {
 
 	left: 0;
 
-	& a {
+	a {
 		@include translateX($navStubWidth - $navWidth);
 
 		border-radius: 0 10px 10px 0;
 	}
 
-	& .icon {
+	.icon {
 		right: 0;
 	}
 
-	& .descText {
+	.descText {
 		padding-right: $navStubWidth;
 	}
 
-	& header {
+	header {
 		border-radius: 0 0 10px 0;
 	}
 
@@ -170,21 +205,21 @@ body {
 
 	right: 0;
 
-	& a {
+	a {
 		@include translateX($navWidth - $navStubWidth);
 
 		border-radius: 10px 0 0 10px;
 	}
 
-	& .icon {
+	.icon {
 		left: 0;
 	}
 
-	& .descText {
+	.descText {
 		padding-left: $navStubWidth;
 	}
 
-	& header {
+	header {
 		border-radius: 0 0 0 10px;
 	}
 
@@ -198,18 +233,18 @@ body {
 		position: static;
 		width: 50%;
 
-		& header {
+		header {
 			border-radius: 0;
 		}
 
-		& a {
+		a {
 			@include translateX(0);
 			margin: 2px 0;
 			border-radius: 0;
 			width: auto;
 		}
 
-		& .icon {
+		.icon {
 			position: static;
 			width: 100%;
 			padding-top: $navHeight * 0.1;
@@ -218,7 +253,7 @@ body {
 			font-size: $navHeight * 0.4;
 		}
 
-		& .descText {
+		.descText {
 			height: $navHeight * 0.4;
 			line-height: $navHeight * 0.4;
 			display: block;
@@ -243,6 +278,15 @@ body {
 
 	&:hover {
 		background: #05C;
+	}
+}
+
+.about {
+	background: #505;
+	color: white;
+
+	&:hover {
+		background: #A42;
 	}
 }
 

@@ -11,11 +11,14 @@ function head($title, $page_name) {
 		<link rel="stylesheet" type="text/css" href="/css/<?php echo $page_name; ?>.css">
 		<meta name="viewport" content="width=device-width">
 	</head>
-	<body><?php
+	<body>
+		<header class="pageTitle"><a href="/">Jeremy Tice</a></header>
+		<div id="body"><?php
 }
 
 function foot($page_name) {
 	?>
+		</div>
 		<script type="text/javascript" src="/js/main.js"></script>
 		<script type="text/javascript" src="/js/<?php echo $page_name; ?>.js"></script>
 	</body>
@@ -40,6 +43,10 @@ function nav() {
 
 	<nav class="nav-2">
 		<header>Content</header>
+		<a href="/about" class="about">
+			<span class="icon" data-icon="X"></span>
+			<span class="descText">About Me</span>
+		</a>
 		<a href="/posts/projects" class="projects">
 			<span class="icon" data-icon="+"></span>
 			<span class="descText">Projects</span>
