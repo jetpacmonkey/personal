@@ -281,6 +281,15 @@ $pageTitleHeight: 30px;
 	}
 }
 
+.linkedin {
+	background: #0E295A;
+	color: white;
+
+	&:hover {
+		background: #6EB2D8;
+	}
+}
+
 .about {
 	background: #505;
 	color: white;

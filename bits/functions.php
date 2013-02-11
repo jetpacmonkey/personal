@@ -31,12 +31,16 @@ function nav() {
 <div class="navWrapper">
 	<nav class="nav-1">
 		<header>Social</header>
-		<a href="https://twitter.com/jetpacmonkey" class="twitter">
-			<span class="icon-social" data-icon="t"></span>
+		<a href="https://twitter.com/jetpacmonkey" class="twitter" title="Twitter">
+			<span class="icon-social" data-icon="t" alt="Twitter"></span>
 			<span class="descText">@jetpacmonkey</span>
 		</a>
-		<a href="https://facebook.com/jetpacmonkey" class="facebook">
-			<span class="icon-social" data-icon="F"></span>
+		<a href="https://facebook.com/jetpacmonkey" class="facebook" title="Facebook">
+			<span class="icon-social" data-icon="F" alt="Facebook"></span>
+			<span class="descText">Jeremy Tice</span>
+		</a>
+		<a href="http://www.linkedin.com/pub/jeremy-tice/12/490/4ab/" class="linkedin" title="LinkedIn">
+			<span class="icon-social" data-icon="l" alt="LinkedIn"></span>
 			<span class="descText">Jeremy Tice</span>
 		</a>
 	</nav>

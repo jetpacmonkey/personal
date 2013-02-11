@@ -372,41 +372,51 @@ html, body {
 }
 
 /* line 284, ../sass/main.scss */
+.linkedin {
+  background: #0E295A;
+  color: white;
+}
+/* line 288, ../sass/main.scss */
+.linkedin:hover {
+  background: #6EB2D8;
+}
+
+/* line 293, ../sass/main.scss */
 .about {
   background: #505;
   color: white;
 }
-/* line 288, ../sass/main.scss */
+/* line 297, ../sass/main.scss */
 .about:hover {
   background: #A42;
 }
 
-/* line 293, ../sass/main.scss */
+/* line 302, ../sass/main.scss */
 .projects {
   background: #804;
   color: white;
 }
-/* line 297, ../sass/main.scss */
+/* line 306, ../sass/main.scss */
 .projects:hover {
   background: #A70;
 }
 
-/* line 302, ../sass/main.scss */
+/* line 311, ../sass/main.scss */
 .music {
   background: #084;
   color: white;
 }
-/* line 306, ../sass/main.scss */
+/* line 315, ../sass/main.scss */
 .music:hover {
   background: #0A7;
 }
 
-/* line 311, ../sass/main.scss */
+/* line 320, ../sass/main.scss */
 .blog {
   background: #3AA;
   color: white;
 }
-/* line 315, ../sass/main.scss */
+/* line 324, ../sass/main.scss */
 .blog:hover {
   background: #7AC;
 }
