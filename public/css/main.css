@@ -1,3 +1,5 @@
+@import url("http://fonts.googleapis.com/css?family=Ranchers");
+@import url("http://weloveiconfonts.com/api/?family=typicons");
 /* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -69,13 +71,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   src: url('/css/fonts/JustVector/justvectorv2-webfont.eot?#iefix') format('eot'), url('/css/fonts/JustVector/justvectorv2-webfont.woff') format('woff'), url('/css/fonts/JustVector/justvectorv2-webfont.ttf') format('truetype'), url('/css/fonts/JustVector/justvectorv2-webfont.svg') format('svg');
 }
 
-@font-face {
-  font-family: "Typicon";
-  src: url('/css/fonts/typicons/typicons-regular-webfont.eot');
-  src: url('/css/fonts/typicons/typicons-regular-webfont.eot?#iefix') format('eot'), url('/css/fonts/typicons/typicons-regular-webfont.woff') format('woff'), url('/css/fonts/typicons/typicons-regular-webfont.ttf') format('truetype'), url('/css/fonts/typicons/typicons-regular-webfont.svg') format('svg');
-}
-
-/* line 24, ../sass/main.scss */
+/* line 21, ../sass/main.scss */
 html, body {
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -84,7 +80,7 @@ html, body {
   font-size: 14px;
 }
 
-/* line 31, ../sass/main.scss */
+/* line 28, ../sass/main.scss */
 .pageTitle {
   position: absolute;
   top: 0;
@@ -92,26 +88,27 @@ html, body {
   right: 0;
   height: 40px;
   line-height: 40px;
-  font-size: 1.5em;
+  font-size: 1.4em;
   font-weight: bold;
   background: #aaa;
+  font-family: "Ranchers";
 }
-/* line 42, ../sass/main.scss */
+/* line 41, ../sass/main.scss */
 .pageTitle a {
   text-shadow: 0 -1px 0 #858585, 0 1px 10px rgba(0, 0, 0, 0.6), 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 7px 10px rgba(0, 0, 0, 0.25);
   font-style: italic;
-  font-weight: bold;
   color: #222;
-  margin: 0 20px;
+  padding: 0 20px;
   text-decoration: none;
+  letter-spacing: 3px;
   position: relative;
 }
-/* line 62, ../sass/main.scss */
+/* line 61, ../sass/main.scss */
 .pageTitle a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
-/* line 66, ../sass/main.scss */
+/* line 65, ../sass/main.scss */
 .pageTitle a:after {
   content: "";
   position: absolute;
@@ -127,7 +124,7 @@ html, body {
   background: linear-gradient(top, rgba(170, 170, 170, 0.6), rgba(170, 170, 170, 0));
 }
 
-/* line 79, ../sass/main.scss */
+/* line 78, ../sass/main.scss */
 #body {
   position: absolute;
   top: 40px;
@@ -142,13 +139,13 @@ html, body {
   padding: 2%;
 }
 @media (max-width: 600px) {
-  /* line 79, ../sass/main.scss */
+  /* line 78, ../sass/main.scss */
   #body {
     padding: 0;
   }
 }
 
-/* line 99, ../sass/main.scss */
+/* line 98, ../sass/main.scss */
 #main {
   margin: 2% auto;
   width: 1000px;
@@ -160,7 +157,7 @@ html, body {
   overflow: auto;
 }
 @media (max-width: 600px) {
-  /* line 99, ../sass/main.scss */
+  /* line 98, ../sass/main.scss */
   #main {
     max-width: none;
     min-height: 0;
@@ -170,7 +167,7 @@ html, body {
   }
 }
 
-/* line 118, ../sass/main.scss */
+/* line 117, ../sass/main.scss */
 h1 {
   text-align: center;
   font-style: italic;
@@ -187,22 +184,22 @@ h1 {
   letter-spacing: 2px;
 }
 
-/* line 140, ../sass/main.scss */
+/* line 139, ../sass/main.scss */
 .icon, .icon-social {
   display: inline-block;
-  font-family: "Typicon";
+  font-family: "Typicons";
 }
-/* line 144, ../sass/main.scss */
+/* line 143, ../sass/main.scss */
 .icon:after, .icon-social:after {
   content: attr(data-icon);
 }
 
-/* line 149, ../sass/main.scss */
+/* line 148, ../sass/main.scss */
 .icon-social {
   font-family: "JustVector";
 }
 
-/* line 156, ../sass/main.scss */
+/* line 155, ../sass/main.scss */
 .navWrapper:after {
   /* clearfix */
   display: block;
@@ -213,7 +210,7 @@ h1 {
   line-height: 0;
 }
 
-/* line 166, ../sass/main.scss */
+/* line 165, ../sass/main.scss */
 .nav-1, .nav-2 {
   width: 150px;
   position: absolute;
@@ -221,7 +218,7 @@ h1 {
   min-height: 100%;
   overflow: hidden;
 }
-/* line 173, ../sass/main.scss */
+/* line 172, ../sass/main.scss */
 .nav-1 a, .nav-2 a {
   position: relative;
   display: block;
@@ -235,14 +232,14 @@ h1 {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 187, ../sass/main.scss */
+/* line 186, ../sass/main.scss */
 .nav-1 a, .nav-2 a, .nav-1 a .descText, .nav-2 a .descText {
   -webkit-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
 }
-/* line 191, ../sass/main.scss */
+/* line 190, ../sass/main.scss */
 .nav-1 a:hover, .nav-2 a:hover {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -252,16 +249,16 @@ h1 {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
   opacity: 0.7;
 }
-/* line 195, ../sass/main.scss */
+/* line 194, ../sass/main.scss */
 .nav-1 a:hover .descText, .nav-2 a:hover .descText {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
 }
-/* line 199, ../sass/main.scss */
+/* line 198, ../sass/main.scss */
 .nav-1 a:hover .icon, .nav-2 a:hover .icon, .nav-1 a:hover .icon-social, .nav-2 a:hover .icon-social, .nav-1 a:hover .icon-social, .nav-2 a:hover .icon-social {
   text-shadow: none;
 }
-/* line 205, ../sass/main.scss */
+/* line 204, ../sass/main.scss */
 .nav-1 .icon, .nav-2 .icon, .nav-1 .icon-social, .nav-2 .icon-social, .nav-1 .icon-social, .nav-2 .icon-social {
   font-size: 30px;
   width: 30px;
@@ -271,7 +268,7 @@ h1 {
   top: 0;
   text-shadow: 0 0 8px black;
 }
-/* line 215, ../sass/main.scss */
+/* line 214, ../sass/main.scss */
 .nav-1 header, .nav-2 header {
   background: #aaa;
   font-size: 1.3em;
@@ -280,11 +277,11 @@ h1 {
   margin: 0;
 }
 
-/* line 224, ../sass/main.scss */
+/* line 223, ../sass/main.scss */
 .nav-1 {
   left: 0;
 }
-/* line 229, ../sass/main.scss */
+/* line 228, ../sass/main.scss */
 .nav-1 a {
   -webkit-transform: translateX(-120px);
   -moz-transform: translateX(-120px);
@@ -293,30 +290,30 @@ h1 {
   transform: translateX(-120px);
   border-radius: 0 10px 10px 0;
 }
-/* line 235, ../sass/main.scss */
+/* line 234, ../sass/main.scss */
 .nav-1 .icon, .nav-1 .icon-social {
   right: 0;
 }
-/* line 239, ../sass/main.scss */
+/* line 238, ../sass/main.scss */
 .nav-1 .descText {
   padding-right: 30px;
 }
-/* line 243, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 .nav-1 header {
   border-radius: 0 0 10px 0;
 }
 @media (max-width: 600px) {
-  /* line 224, ../sass/main.scss */
+  /* line 223, ../sass/main.scss */
   .nav-1 {
     float: left;
   }
 }
 
-/* line 252, ../sass/main.scss */
+/* line 251, ../sass/main.scss */
 .nav-2 {
   right: 0;
 }
-/* line 257, ../sass/main.scss */
+/* line 256, ../sass/main.scss */
 .nav-2 a {
   -webkit-transform: translateX(120px);
   -moz-transform: translateX(120px);
@@ -325,36 +322,36 @@ h1 {
   transform: translateX(120px);
   border-radius: 10px 0 0 10px;
 }
-/* line 263, ../sass/main.scss */
+/* line 262, ../sass/main.scss */
 .nav-2 .icon, .nav-2 .icon-social {
   left: 0;
 }
-/* line 267, ../sass/main.scss */
+/* line 266, ../sass/main.scss */
 .nav-2 .descText {
   padding-left: 30px;
 }
-/* line 271, ../sass/main.scss */
+/* line 270, ../sass/main.scss */
 .nav-2 header {
   border-radius: 0 0 0 10px;
 }
 @media (max-width: 600px) {
-  /* line 252, ../sass/main.scss */
+  /* line 251, ../sass/main.scss */
   .nav-2 {
     float: right;
   }
 }
 
 @media (max-width: 600px) {
-  /* line 280, ../sass/main.scss */
+  /* line 279, ../sass/main.scss */
   .nav-1, .nav-2 {
     position: static;
     width: 50%;
   }
-  /* line 285, ../sass/main.scss */
+  /* line 284, ../sass/main.scss */
   .nav-1 header, .nav-2 header {
     border-radius: 0;
   }
-  /* line 289, ../sass/main.scss */
+  /* line 288, ../sass/main.scss */
   .nav-1 a, .nav-2 a {
     -webkit-transform: translateX(0);
     -moz-transform: translateX(0);
@@ -365,7 +362,7 @@ h1 {
     border-radius: 0;
     width: auto;
   }
-  /* line 296, ../sass/main.scss */
+  /* line 295, ../sass/main.scss */
   .nav-1 .icon, .nav-2 .icon, .nav-1 .icon-social, .nav-2 .icon-social {
     position: static;
     width: 100%;
@@ -374,7 +371,7 @@ h1 {
     line-height: 50px;
     font-size: 40px;
   }
-  /* line 305, ../sass/main.scss */
+  /* line 304, ../sass/main.scss */
   .nav-1 .descText, .nav-2 .descText {
     height: 40px;
     line-height: 40px;
@@ -384,72 +381,72 @@ h1 {
   }
 }
 
-/* line 315, ../sass/main.scss */
+/* line 314, ../sass/main.scss */
 .twitter {
   background: #0BF;
   color: white;
 }
-/* line 319, ../sass/main.scss */
+/* line 318, ../sass/main.scss */
 .twitter:hover {
   background: #08F;
 }
 
-/* line 324, ../sass/main.scss */
+/* line 323, ../sass/main.scss */
 .facebook {
   background: #00F;
   color: white;
 }
-/* line 328, ../sass/main.scss */
+/* line 327, ../sass/main.scss */
 .facebook:hover {
   background: #05C;
 }
 
-/* line 333, ../sass/main.scss */
+/* line 332, ../sass/main.scss */
 .linkedin {
   background: #0E295A;
   color: white;
 }
-/* line 337, ../sass/main.scss */
+/* line 336, ../sass/main.scss */
 .linkedin:hover {
   background: #6EB2D8;
 }
 
-/* line 342, ../sass/main.scss */
+/* line 341, ../sass/main.scss */
 .about {
   background: #505;
   color: white;
 }
-/* line 346, ../sass/main.scss */
+/* line 345, ../sass/main.scss */
 .about:hover {
   background: #A42;
 }
 
-/* line 351, ../sass/main.scss */
+/* line 350, ../sass/main.scss */
 .projects {
   background: #804;
   color: white;
 }
-/* line 355, ../sass/main.scss */
+/* line 354, ../sass/main.scss */
 .projects:hover {
   background: #A70;
 }
 
-/* line 360, ../sass/main.scss */
+/* line 359, ../sass/main.scss */
 .music {
   background: #084;
   color: white;
 }
-/* line 364, ../sass/main.scss */
+/* line 363, ../sass/main.scss */
 .music:hover {
   background: #0A7;
 }
 
-/* line 369, ../sass/main.scss */
+/* line 368, ../sass/main.scss */
 .blog {
   background: #3AA;
   color: white;
 }
-/* line 373, ../sass/main.scss */
+/* line 372, ../sass/main.scss */
 .blog:hover {
   background: #7AC;
 }

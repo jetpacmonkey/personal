@@ -3,6 +3,10 @@
 @import "compass/reset";
 @import "_bits";
 
+@import url("http://fonts.googleapis.com/css?family=Ranchers");
+@import url("http://weloveiconfonts.com/api/?family=typicons");
+
+
 $navWidth: 150px;
 $navStubWidth: 30px;
 $navHeight: 100px;
@@ -13,13 +17,6 @@ $navHeight: 100px;
 		"JustVector/justvectorv2-webfont.ttf", ttf,
 		"JustVector/justvectorv2-webfont.svg", svg),
 	"JustVector/justvectorv2-webfont.eot");
-
-@include font-face(Typicon,
-	font-files(
-		"typicons/typicons-regular-webfont.woff", woff,
-		"typicons/typicons-regular-webfont.ttf", ttf,
-		"typicons/typicons-regular-webfont.svg", svg),
-	"typicons/typicons-regular-webfont.eot");
 
 html, body {
 	height: 100%;
@@ -35,9 +32,11 @@ $pageTitleHeight: 40px;
 	right: 0;
 	height: $pageTitleHeight;
 	line-height: $pageTitleHeight;
-	font-size: 1.5em;
+	font-size: 1.4em;
 	font-weight: bold;
 	background: #aaa;
+
+	font-family: "Ranchers";
 
 	a {
 		@include text-shadow( 
@@ -54,10 +53,10 @@ $pageTitleHeight: 40px;
 
 
 		font-style: italic;
-		font-weight: bold;
 		color: #222;
-		margin: 0 20px;
+		padding: 0 20px;
 		text-decoration: none;
+		letter-spacing: 3px;
 		position: relative;
 		&:hover {
 			@include opacity(0.8);
@@ -139,7 +138,7 @@ h1 {
 
 .icon {
 	display: inline-block;
-	font-family: "Typicon";
+	font-family: "Typicons";
 
 	&:after {
 		content: attr(data-icon);
