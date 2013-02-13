@@ -1,16 +1,4 @@
 /* line 4, ../sass/index.scss */
-h1 {
-  text-align: center;
-  font-style: italic;
-  font-size: 2em;
-  line-height: 1.5;
-  background: #8c8c8c;
-  background: rgba(180, 180, 180, 0.3);
-  margin: 0;
-  color: #333;
-}
-
-/* line 15, ../sass/index.scss */
 #content {
   padding: 2em 6%;
   font-size: 1.3em;
@@ -18,7 +6,7 @@ h1 {
   color: #333;
 }
 
-/* line 22, ../sass/index.scss */
+/* line 11, ../sass/index.scss */
 #content a {
   color: #08F;
   font-style: italic;
@@ -27,17 +15,17 @@ h1 {
   text-decoration: underline;
 }
 
-/* line 30, ../sass/index.scss */
+/* line 19, ../sass/index.scss */
 #content a[href^="http"]:after {
   content: " \21d7";
 }
 
-/* line 34, ../sass/index.scss */
+/* line 23, ../sass/index.scss */
 #content a[href^="mailto"]:after {
   content: " \2709";
 }
 
-/* line 38, ../sass/index.scss */
+/* line 27, ../sass/index.scss */
 #content a:hover {
   color: #0BF;
   text-decoration: none;
