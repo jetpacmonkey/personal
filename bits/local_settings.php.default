@@ -1,5 +1,11 @@
 <?php
 $settings = array(
-	"root"=>"/home/jetpac/"
+	"root" => "/home/jetpac/",
+	"database" => array(
+		"host" => "localhost",
+		"user" => "USER",
+		"password" => "PASS",
+		"database" => "DB"
+	)
 );
 ?>

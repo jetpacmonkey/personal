@@ -4,15 +4,16 @@ $type = $_GET['type'];
 $dir = "../../posts/$type/";
 
 if (is_dir($dir)) {
-	$dataPath = $dir . "data.json";
+	connect();
 
-	if (file_exists($dataPath)) {
-		$data = json_decode(file_get_contents($dataPath));
-	} else {
-		$data = json_decode("{\"posts\":[]}");
-	}
+	$query = "SELECT * FROM post_types WHERE short=\"$type\"";
+	$result = mysql_query($query);
 
-	head($data->name, "posts");
+	$data = mysql_fetch_assoc($result);
+
+	disconnect();
+
+	head($data['short'], "posts");
 	nav();
 	
 	/*
@@ -22,7 +23,7 @@ if (is_dir($dir)) {
 		echo "</pre>";
 	}
 	*/
-	display("posts", array("type"=>$data->type, "name"=>$data->name, "posts"=>$data->posts));
+	display("posts", array("type"=>$data['type'], "name"=>$data['long'], "posts"=>$posts));
 
 	foot("posts");
 } else {

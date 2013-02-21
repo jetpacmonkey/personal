@@ -79,6 +79,17 @@ function error_page($msg) {
 	foot("error");
 }
 
+function connect() {
+	global $settings;
+
+	mysql_connect($settings['database']['host'], $settings['database']['user'], $settings['database']['password']);
+	mysql_select_db($settings['database']['database']);
+}
+
+function disconnect() {
+	mysql_close();
+}
+
 function display($template, $vars=array()) {
 	global $settings;
 

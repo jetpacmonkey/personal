@@ -7,16 +7,14 @@ $slug = $_GET['slug'];
 $dir = "../../posts/$type/";
 
 if (is_dir($dir)) {
-	$dataPath = $dir . "data.json";
+	connect();
 
-	if (file_exists($dataPath)) {
-		$data = json_decode(file_get_contents($dataPath));
-	} else {
-		$data = json_decode("{\"posts\":[]}");
-	}
-	echo "<pre>";
-	print_r($data);
-	echo "</pre>";
+	$query = "SELECT * FROM post_types WHERE short=\"$type\"";
+	$result = mysql_query($query);
+
+	print_r($result);
+
+	disconnect();
 } else {
 	error_page("Unrecognized post type: $type");
 }
