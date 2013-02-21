@@ -7,9 +7,9 @@ if (is_dir($dir)) {
 	connect();
 
 	$query = "SELECT * FROM post_types WHERE short=\"$type\"";
-	$result = mysql_query($query);
+	$result = mysqli_query($query);
 
-	$data = mysql_fetch_assoc($result);
+	$data = mysqli_fetch_assoc($result);
 
 	disconnect();
 
