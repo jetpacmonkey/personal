@@ -13,7 +13,7 @@ if (is_dir($dir)) {
 
 	disconnect();
 
-	head($data['short'], "posts");
+	head($data['long'], "posts");
 	nav();
 	
 	/*
