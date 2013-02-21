@@ -16,13 +16,14 @@ if (is_dir($dir)) {
 	head($data['long'], "posts");
 	nav();
 	
-	/*
-	foreach ($data->posts as $post) {
-		echo "<pre>";
-		print_r($post);
-		echo "</pre>";
+	$query = "SELECT * FROM posts WHERE type=\"$type\"";
+	$posts_result = mysqli_query($query);
+
+	$posts = array();
+	while ($row = mysqli_fetch_assoc($posts_result)) {
+		$posts[] = $row;
 	}
-	*/
+
 	display("posts", array("type"=>$data['type'], "name"=>$data['long'], "posts"=>$posts));
 
 	foot("posts");
