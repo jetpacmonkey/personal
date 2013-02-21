@@ -1,3 +1,5 @@
 *.DS_Store
 public/.sass-cache/*
 *.tpl.php
+
+bits/local_settings.php
