@@ -10,11 +10,8 @@ if (is_dir($dir)) {
 	$result = mysqli_query($link, $query);
 
 	$data = mysqli_fetch_assoc($result);
-
-	head($data['long'], "posts");
-	nav();
 	
-	$query = "SELECT * FROM posts WHERE type=\"$type\"";
+	$query = "SELECT * FROM posts WHERE type=\"$type\" ORDER BY `date` DESC";
 	$posts_result = mysqli_query($link, $query);
 
 	$posts = array();
@@ -22,11 +19,18 @@ if (is_dir($dir)) {
 		$posts[] = $row;
 	}
 
-	display("posts", array("type"=>$data['type'], "name"=>$data['long'], "posts"=>$posts));
+	disconnect();
+
+	head($data['long'], "posts");
+	nav();
+
+	display("posts", array(
+		"type" => $data['type'],
+		"short" => $data['short'],
+		"name" => $data['long'],
+		"posts" => $posts));
 
 	foot("posts");
-
-	disconnect();
 } else {
 	error_page("Unrecognized post type: $type");
 }

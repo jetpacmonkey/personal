@@ -5,7 +5,8 @@ $settings = array(
 		"host" => "localhost",
 		"user" => "USER",
 		"password" => "PASS",
-		"database" => "DB"
+		"database" => "DB",
+		//"port" => 8889 //optional
 	)
 );
 ?>

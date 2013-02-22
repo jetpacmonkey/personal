@@ -1,0 +1,52 @@
+@import url("http://fonts.googleapis.com/css?family=Paytone+One");
+/* line 7, ../sass/posts.scss */
+.onePost {
+  padding: 20px;
+  border-bottom: 1px solid #bbbbbb;
+}
+/* line 11, ../sass/posts.scss */
+.onePost:last-child {
+  border: none;
+}
+/* line 15, ../sass/posts.scss */
+.onePost .postTitle {
+  font-size: 1.3em;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid #555555;
+  font-family: "Paytone One", sans-serif;
+}
+/* line 23, ../sass/posts.scss */
+.onePost .postTitle:hover {
+  color: #555;
+  border-bottom: 1px dotted #aaaaaa;
+}
+/* line 28, ../sass/posts.scss */
+.onePost .postTitle .date {
+  font-style: italic;
+  font-size: 0.8em;
+  margin-right: 0.1em;
+}
+/* line 33, ../sass/posts.scss */
+.onePost .postTitle .date:after {
+  content: ": ";
+}
+/* line 36, ../sass/posts.scss */
+.onePost .postTitle .date:empty:after {
+  display: none;
+}
+/* line 42, ../sass/posts.scss */
+.onePost .description {
+  display: block;
+  margin-top: 0.8em;
+  text-indent: 0.6em;
+}
+
+/* line 49, ../sass/posts.scss */
+.noPosts {
+  display: block;
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 2em;
+}

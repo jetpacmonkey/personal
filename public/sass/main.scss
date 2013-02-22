@@ -3,7 +3,7 @@
 @import "compass/reset";
 @import "_bits";
 
-@import url("http://fonts.googleapis.com/css?family=Ranchers");
+@import url("http://fonts.googleapis.com/css?family=Ranchers|Belleza");
 @import url("http://weloveiconfonts.com/api/?family=typicons");
 
 
@@ -25,6 +25,8 @@ html, body {
 	@include box-sizing(border-box);
 	font-size: 14px;
 
+	font-family: "Belleza", sans-serif;
+
 	/* background from http://subtlepatterns.com/wild-oliva/ */
 	background: url(../img/wild_oliva.png);
 }
@@ -37,7 +39,7 @@ $pageTitleHeight: 40px;
 	font-weight: bold;
 	background: #aaa;
 
-	font-family: "Ranchers";
+	font-family: "Ranchers", sans-serif;
 
 	a {
 		@include text-shadow( 
@@ -106,7 +108,6 @@ $pageTitleHeight: 40px;
 	position: relative;
 
 	@include box-sizing(border-box);
-	font-family: "Times New Roman", Times, serif;
 	margin: 0;
 	padding: 2%;
 
@@ -144,6 +145,7 @@ h1 {
 	@include background(linear-gradient(top, #fff, #ccc));
 	margin: 0;
 	color: transparent;
+	font-family: "Times New Roman", Times, serif;
 
 	@include text-shadow(
 		0 0 1px #fff,
@@ -190,6 +192,7 @@ h1 {
 	top: 0;
 	min-height: 100%;
 	overflow: hidden;
+	font-family: "Times New Roman", Times, serif;
 
 	a {
 		position: relative;

@@ -110,7 +110,7 @@ function disconnect() {
 	mysqli_close($GLOBALS['link']);
 }
 
-function display($template, $vars=array()) {
+function display($template, $vars=array(), $ajax=false) {
 	global $settings;
 
 	require($settings['root'] . 'bits/Smarty/libs/Smarty.class.php');
@@ -126,7 +126,13 @@ function display($template, $vars=array()) {
 		$smarty->assign($key, $value);
 	}
 
+	if (!$ajax)
+		echo '<div id="main">';
+
 	$smarty->display("$template.tpl");
+
+	if (!$ajax)
+		echo '</div>';
 }
 
 include_once "markdown_extra/markdown.php";
