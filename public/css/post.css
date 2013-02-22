@@ -1,0 +1,79 @@
+/* line 3, ../sass/post.scss */
+article {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+/* line 8, ../sass/post.scss */
+article .date {
+  font-size: 1em;
+  color: #888;
+  font-style: italic;
+  float: right;
+  line-height: 1.4em;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+/* line 17, ../sass/post.scss */
+article .date:before {
+  content: "Posted on ";
+}
+/* line 21, ../sass/post.scss */
+article .date:empty {
+  display: none;
+}
+
+/* line 27, ../sass/post.scss */
+.content {
+  padding: 20px;
+  font-size: 1.2em;
+}
+/* line 32, ../sass/post.scss */
+.content h1, .content h2, .content h3, .content h4 {
+  background: none;
+  color: inherit;
+  text-shadow: none;
+  text-align: left;
+  margin: 0;
+  display: block;
+  height: auto;
+  line-height: 1em;
+  font-family: inherit;
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 46, ../sass/post.scss */
+.content h1 {
+  font-size: 1.7em;
+  font-weight: bold;
+  margin: 0.4em 0;
+  text-shadow: 1px 1px 4px #888888;
+}
+/* line 55, ../sass/post.scss */
+.content h2 {
+  font-size: 1.5em;
+  margin: 0.4em 0.33em;
+}
+/* line 60, ../sass/post.scss */
+.content h3 {
+  font-size: 1.3em;
+  margin: 0.2em 0.67em;
+}
+/* line 65, ../sass/post.scss */
+.content h4 {
+  font-size: 1.2em;
+  margin: 0.2em 1em;
+}
+/* line 70, ../sass/post.scss */
+.content p {
+  text-indent: 1.5em;
+  line-height: 1.3em;
+}
+/* line 75, ../sass/post.scss */
+.content :first-child {
+  margin-top: 0;
+}
+/* line 79, ../sass/post.scss */
+.content :last-child {
+  margin-bottom: 0;
+}

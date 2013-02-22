@@ -4,7 +4,7 @@
 		{foreach $posts as $post}
 		<li class="onePost">
 			<a class="postTitle" href="/post/{$short}/{$post['id']}/{$post['slug']}">
-				<span class="date">{$post['date']|date_format:"%b %e, %Y"}</span>{$post['name']}
+				<span class="date">{$post['date']|date_format:"%b %e, %Y"}</span>{$post['title']}
 			</a>
 			<div class="description">{$post['desc']}</div>
 		</li>
