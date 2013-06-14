@@ -12,6 +12,8 @@
 		<br><br>
 		If you're interested in seeing the progress of this site, I'll be committing semi-regularly to a <a href="https://github.com/jetpacmonkey/personal">Github repository</a>.
 		Or, if you don't care about code and just want to see what it looks like, check out <a href="http://dev.jeremytice.com">dev.jeremytice.com</a>
+
+		<strong>If you're looking to RSVP for my wedding, that can be found at <a href="/wedding">http://www.jeremytice.com<em>/wedding</em></a></strong>
 	</div>
 </div>
 <?php foot("index"); ?>
