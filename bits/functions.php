@@ -43,6 +43,10 @@ function nav() {
 			<span class="icon-social" data-icon="l" alt="LinkedIn"></span>
 			<span class="descText">Jeremy Tice</span>
 		</a>
+		<a href="https://plus.google.com/108913107257085391122?rel=author" class="google_plus" title="Google+">
+			<span class="icon-social" data-icon="g" alt="Google+"></span>
+			<span class="descText">+Jeremy</span>
+		</a>
 	</nav>
 
 	<nav class="nav-2">

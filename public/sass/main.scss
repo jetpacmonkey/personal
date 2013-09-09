@@ -363,6 +363,15 @@ h1 {
 	}
 }
 
+.google_plus {
+	background: #D34836;
+	color: white;
+
+	&:hover {
+		background: #2D2D2D;
+	}
+}
+
 .about {
 	background: #505;
 	color: white;
