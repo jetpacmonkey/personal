@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>
+  {% block head_title %}{{site.title}}{% if file.title %} | {{ file.title }}{% endif %}{% endblock %}
+  </title>
+  <meta name="description" content="{{site.description}}">
+  <link rel="stylesheet" type="text/css" href="{{theme.css}}" />
+  {% block css %}{% endblock %}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+  {% block body_content %}
+
+  {% endblock %}
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "personal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jetpacmonkey/personal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jetpacmonkey/personal/issues"
+  },
+  "homepage": "https://github.com/jetpacmonkey/personal#readme",
+  "dependencies": {
+    "reptar-excerpt": "^0.7.0",
+    "reptar-html-minifier": "^0.7.0",
+    "reptar-theme-thread": "^0.3.3"
+  }
+}

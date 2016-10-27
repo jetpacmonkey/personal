@@ -1,0 +1,12 @@
+name: 'local'
+
+path:
+  templates: ./templates
+  plugins: ./plugins
+  destination: ./
+
+assets:
+  images:
+    source: ./img
+  css:
+    source: ./css

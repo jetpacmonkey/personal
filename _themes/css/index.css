@@ -70,6 +70,11 @@ h1 {
   opacity: 0.8;
 }
 
+h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .me-wrapper {
   float: left;
   margin-right: 10px;
@@ -100,7 +105,7 @@ h1 {
   z-index: 1;
 }
 
-.links {
+ul {
   position: relative;
   margin: 0;
   padding: 0;
@@ -119,6 +124,8 @@ li a {
   cursor: pointer;
   display: inline-block;
   transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+  color: inherit;
+  text-decoration: none;
 }
 
 li a::before {
@@ -143,7 +150,7 @@ li + li {
 li a:hover {
   transform: skew(-10deg);
   color: #fff;
-  text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 4px rgba(0, 0, 120, 0.7);
 }
 
 li a:hover::before {
@@ -241,7 +248,7 @@ li a:hover::before {
     max-width: none;
   }
 
-  .links {
+  ul {
     text-align: center;
     animation: fade-in 500ms;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.8), 0 0 1px #FFF;
