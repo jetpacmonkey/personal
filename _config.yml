@@ -58,7 +58,13 @@ file:
          path: ./_posts
       values:
         template: post
-        permalink: /:title/
+        permalink: /blog/:title/
+    -
+      scope:
+        path: ./_projects
+      values:
+        template: project
+        permalink: /projects/:title/
     -
       scope:
          # Any file with this matching metadata will have the default values applied.
@@ -81,7 +87,7 @@ file:
 collections:
   post:
     path: ./_posts
-    template: index
+    template: blog-index
     page_size: 6
     sort:
       key: date
@@ -89,6 +95,16 @@ collections:
     permalink:
       index: /blog
       page:  /blog/page/:page/
+  project:
+    path: ./_projects
+    template: projects-index
+    page_size: 6
+    sort:
+      key: date
+      order: descending
+    permalink:
+      index: /projects
+      page:  /projects/page/:page/
   tag:
     metadata: tags
     template: tag

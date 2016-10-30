@@ -19,7 +19,6 @@
   "homepage": "https://github.com/jetpacmonkey/personal#readme",
   "dependencies": {
     "reptar-excerpt": "^0.7.0",
-    "reptar-html-minifier": "^0.7.0",
-    "reptar-theme-thread": "^0.3.3"
+    "reptar-html-minifier": "^0.7.0"
   }
 }

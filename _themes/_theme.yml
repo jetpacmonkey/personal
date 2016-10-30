@@ -9,4 +9,7 @@ assets:
   images:
     source: ./img
   css:
-    source: ./css
+    source: ./css/main.scss
+    processor:
+      name: sass
+      hash: true

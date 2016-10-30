@@ -5,6 +5,6 @@ template: index
 ---
 
 
-* [About Me](./about)
-* [Blog](./blog)
-* [Contact](./contact)
+* [About Me](/about)
+* [Blog](/blog)
+* [Projects](/projects)

@@ -1,0 +1,20 @@
+@keyframes fly-in {
+  from {
+    transform: translateX(calc((100vh - 1024px) / 2 - 100%));
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

@@ -11,9 +11,12 @@
   <link rel="stylesheet" type="text/css" href="{{theme.css}}" />
   {% block css %}{% endblock %}
 </head>
-<body class="{% block body_class %}{% endblock %}">
-  {% block body_content %}
+<body class="{% block body_class %}default-page{% endblock %}">
+  <h1 class="header">{% block header %}{% endblock %}</h1>
+  <div class="content">
+    {% block content %}
 
-  {% endblock %}
+    {% endblock %}
+  </div>
 </body>
 </html>
