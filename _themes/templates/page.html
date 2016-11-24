@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
-{% block body_content %}
+{% block header %}
+<ol class="breadcrumbs">
+  <li><a href="/">Jeremy Tice</a></li>
+  <li><a href="" class="current">{{ file.title }}</a></li>
+</ol>
+{% endblock %}
+
+{% block content %}
 {{ file.content | safe }}
 {% endblock %}

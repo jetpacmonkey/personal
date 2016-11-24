@@ -1,0 +1,32 @@
+:root {
+  $base-font-size: 18px;
+  $min-font-size: 14px;
+  $shrink-at-height: 500px;
+
+  font-size: $base-font-size;
+
+  @media (max-width: $max-content-width) {
+    font-size: ($base-font-size * 100 / $max-content-width) * 1vw;
+  }
+
+  @media (max-height: $shrink-at-height) {
+    font-size: ($base-font-size * 100 / $shrink-at-height) * 1vh;
+  }
+
+  @media (max-height: $shrink-at-height * $min-font-size / $base-font-size) {
+    font-size: $min-font-size;
+  }
+
+  @media (max-width: $max-content-width * $min-font-size / $base-font-size) {
+    font-size: $min-font-size;
+  }
+
+  // Mobile-width has its own rules
+  @media (max-width: $mobile-width) {
+    font-size: 4vmin;
+  }
+
+  @media (max-width: $mobile-width) and (max-height: 250px) {
+    font-size: 10px;
+  }
+}
